@@ -1,6 +1,14 @@
 # multi-environment-terraform
 
-# Development Environment
+## Pre-Requisites
+
+```bash
+aws configure --profile default
+aws configure --profile dev
+aws configure --profile prod
+```
+
+## Development Environment
 
 ```bash
 terraform init -reconfigure -backend-config="backend-config/dev.tfvars"
@@ -8,7 +16,7 @@ terraform plan -var-file="tfvars/dev.tfvars"
 terraform apply -var-file="tfvars/dev.tfvars" -auto-approve
 ```
 
-# Production Environment
+## Production Environment
 
 ```bash
 terraform init -reconfigure -backend-config="backend-config/prod.tfvars"
@@ -16,14 +24,14 @@ terraform plan -var-file="tfvars/prod.tfvars"
 terraform apply -var-file="tfvars/prod.tfvars" -auto-approve
 ```
 
-# Destroy Development Environment
+## Destroy Development Environment
 
 ```bash
 terraform init -reconfigure -backend-config="backend-config/dev.tfvars"
 terraform destroy -var-file="tfvars/dev.tfvars" -auto-approve
 ```
 
-# Destroy Production Environment
+## Destroy Production Environment
 
 ```bash
 terraform init -reconfigure -backend-config="backend-config/prod.tfvars"
