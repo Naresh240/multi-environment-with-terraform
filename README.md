@@ -32,4 +32,4 @@ terraform destroy -var-file="tfvars/prod.tfvars" -auto-approve
 
 >:note: statefiles creating in different directories(dev/prod) based on environment variables provided in backend config
 
-    ![image](https://user-images.githubusercontent.com/58024415/189519371-589a4349-4a9f-4072-8c76-7a1fe12886dc.png)
+  ![image](https://user-images.githubusercontent.com/58024415/189519371-589a4349-4a9f-4072-8c76-7a1fe12886dc.png)
